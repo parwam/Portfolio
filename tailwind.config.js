@@ -9,10 +9,11 @@ module.exports = {
     },
 
     colors: {
-      "mainbg-color": "rgb(251, 251, 250)",
+      "mainbg-color": "rgb(249, 248, 244)",
       "font-color": "rgb(55, 53, 47)",
       "link-color": "rgb(232, 28, 79)",
       "hover-color": "rgb(108, 117, 125)",
+      "navbar-color": "rgb(244, 242, 233)",
     },
 
     extend: {
