@@ -1,6 +1,9 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: ["./src/**/*.{html,js}"],
+
+  darkMode: 'class',
+
   theme: {
     fontFamily: {
       systemui: ["system-ui", "sans-serif"],
@@ -10,6 +13,7 @@ module.exports = {
 
     colors: {
       "mainbg-color": "rgb(249, 248, 244)",
+      "mainbg-color-dark": "rgb(30, 30, 30)",
       "font-color": "rgb(55, 53, 47)",
       "link-color": "rgb(232, 28, 79)",
       "hover-color": "rgb(108, 117, 125)",
