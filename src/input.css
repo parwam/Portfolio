@@ -5,3 +5,7 @@
 .display-none {
     @apply hidden;
 }
+
+* {
+    @apply transition-colors duration-100
+}
