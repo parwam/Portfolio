@@ -3,9 +3,9 @@
 @tailwind utilities;
 
 .display-none {
-    @apply hidden;
+  @apply hidden;
 }
 
 * {
-    @apply transition-colors duration-100
+  @apply transition-colors duration-100;
 }
