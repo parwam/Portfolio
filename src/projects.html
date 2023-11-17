@@ -36,67 +36,83 @@
     />
     <meta name="msapplication-TileColor" content="#da532c" />
     <meta name="theme-color" content="#ffffff" />
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
   </head>
   <body
     class="bg-mainbg-color dark:bg-mainbg-color-dark text-font-color dark:text-font-color-dark font-systemui"
   >
     <header
-      class="bg-navbar-color dark:bg-navbar-color-dark flex items-center justify-between py-3 px-8 mb-10 sticky top-0 z-10"
+      class="bg-navbar-color dark:bg-navbar-color-dark flex items-center justify-between py-1 md:py-3 px-2 md:px-8 mb-10 sticky top-0 z-10"
     >
       <div class="flex flex-row items-center">
         <a href="/src/index.html">
           <img
-            class="h-16"
+            class="h-9 sm:h-12 md:h-16 w-auto pr-0.5 md:pr-2"
             src="../public/images/profile-icon.png"
             alt="profile-icon"
           />
         </a>
         <!-- <div class="flex flex-col"> -->
-        <p class="font-bold text-3xl">Parva</p>
+        <p class="font-bold text-xl md:text-3xl">Parva</p>
         <!-- <p class="text-xl">Observer, Creator</p> -->
         <!-- </div> -->
       </div>
-      <nav
-        class="flex flex-row space-x-4 font-bold text-2xl items-center justify-center"
+      <span class="text-3xl cursor-pointer mx-2 sm:hidden block">
+        <ion-icon name="menu" onclick="Menu(this)"></ion-icon>
+      </span>
+      <div
+        class="topbar-menu bg-navbar-color dark:bg-navbar-color-dark sm:flex z-[-1] md:z-auto left-0 absolute md:static w-full md:w-auto opacity-0 md:opacity-100 top-[-400px] transition-all ease-in duration-200"
       >
-        <a class="hover:text-hover-color" href="/src/index.html">About</a>
-        <a
-          class="underline underline-offset-8 hover:text-hover-color"
-          href="/src/projects.html"
-          >Projects</a
+        <nav
+          class="flex flex-col sm:flex-row space-x-2 md:space-x-4 font-bold text-lg md:text-2xl items-center justify-center"
         >
-        <a class="hover:text-hover-color" href="/src/extras.html">Extras</a>
-        <div
-          class="text-gray-500 dark:text-gray-400 hover:text-hover-color rounded-lg text-sm p-2.5"
-        >
-          <button type="button" title="switch to light theme">
-            <svg
-              class="sun w-5 h-5"
-              fill="currentColor"
-              viewBox="0 0 20 20"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"
-              ></path>
-            </svg>
-          </button>
-          <button type="button" title="switch to dark theme">
-            <svg
-              class="moon w-5 h-5"
-              fill="currentColor"
-              viewBox="0 0 20 20"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
-                fill-rule="evenodd"
-                clip-rule="evenodd"
-              ></path>
-            </svg>
-          </button>
-        </div>
-      </nav>
+          <a class="hover:text-hover-color" href="/src/index.html">About</a>
+          <a
+            class="underline underline-offset-8 hover:text-hover-color"
+            href="/src/projects.html"
+            >Projects</a
+          >
+          <a class="hover:text-hover-color" href="/src/extras.html">Extras</a>
+          <div
+            class="text-gray-500 dark:text-gray-400 hover:text-hover-color rounded-lg text-sm p-1 md:p-2.5"
+          >
+            <button type="button" title="switch to light theme">
+              <svg
+                class="sun w-5 h-5"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"
+                ></path>
+              </svg>
+            </button>
+            <button type="button" title="switch to dark theme">
+              <svg
+                class="moon w-5 h-5"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                ></path>
+              </svg>
+            </button>
+          </div>
+        </nav>
+      </div>
     </header>
     <section class="mb-14">
       <h2
