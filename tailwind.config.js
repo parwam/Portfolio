@@ -29,10 +29,6 @@ module.exports = {
       height: {
         128: "600px",
       },
-
-      maxWidth: {
-        '3.5xl': '825px',
-      }
     },
   },
 
