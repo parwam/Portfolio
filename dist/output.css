@@ -916,9 +916,22 @@ video {
   transition-duration: 100ms;
 }
 
+.hover\:h-52:hover {
+  height: 13rem;
+}
+
+.hover\:bg-opacity-50:hover {
+  --tw-bg-opacity: 0.5;
+}
+
 .hover\:text-hover-color:hover {
   --tw-text-opacity: 1;
   color: rgb(108 117 125 / var(--tw-text-opacity));
+}
+
+.hover\:text-link-color:hover {
+  --tw-text-opacity: 1;
+  color: rgb(232 28 79 / var(--tw-text-opacity));
 }
 
 .hover\:no-underline:hover {
