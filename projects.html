@@ -287,7 +287,7 @@
       <h2
         class="text-center text-3xl md:text-5xl font-bold underline mt-3 mb-5"
       >
-        2D Platformer
+        Pixel Adventure
       </h2>
       <div class="max-w-5x xl:max-w-screen-lg m-auto mb-5 xl:mb-8">
         <div
@@ -295,7 +295,7 @@
         >
           <video controls>
             <source
-              src="public/Videos/2DPlatformer-Gameplay.mp4"
+              src="public/Videos/PixelAdventure-Gameplay.mp4"
               type="video/mp4"
             />
           </video>
@@ -306,23 +306,27 @@
       >
         <a
           class="underline decoration-solid font-medium pl-10 mb-2 lg:mb-5 text-link-color text-base md:text-xl block text-center hover:no-underline"
-          href="https://github.com/MockJoke/2D-Platformer-Game"
+          href="https://github.com/MockJoke/Pixel-Adventure"
           target="_blank"
           rel="noopener noreferrer"
           >Project Link</a
         >
         <ul class="list-outside list-disc pl-5 md:pl-8 text-base md:text-xl">
           <li>
-            Basic 2D Platformer mechanics like movement, variable jumping,
+            Basic 2D Platformer mechanics like movement, jump-extra jumps,
             attack, flipping, animations
           </li>
           <li>2D patrolling and shooting AI for enemy</li>
           <li>Levels unlocking system</li>
-          <li>Customizable collectibles</li>
+          <li>Character selection screen with specific movement datas for each character</li>
+          <li>Audio Manager to play sound effects and random background music on each level - based on singleton design pattern</li>
           <li>
             Responsive UI/UX for player's health, collectibles and game states
-            i.e. win, pause
+            i.e. win, gameover, pause
           </li>
+          <li>Multiple traps based on Unity's physics & joints system</li>
+          <li>Checkpoint system to respawn player based on latest crossed checkpoint</li>
+          <li>Simple save system to keep track of levels, scores, collectibles etc - using PlayerPrefs</li>
         </ul>
       </div>
     </section>
