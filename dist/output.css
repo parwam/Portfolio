@@ -751,6 +751,18 @@ video {
   justify-content: space-between;
 }
 
+.gap-0 {
+  gap: 0px;
+}
+
+.gap-0\.5 {
+  gap: 0.125rem;
+}
+
+.gap-1 {
+  gap: 0.25rem;
+}
+
 .gap-2 {
   gap: 0.5rem;
 }
@@ -805,6 +817,11 @@ video {
 .px-2 {
   padding-left: 0.5rem;
   padding-right: 0.5rem;
+}
+
+.px-6 {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
 }
 
 .px-8 {
@@ -912,8 +929,12 @@ video {
   text-decoration-style: solid;
 }
 
-.underline-offset-8 {
-  text-underline-offset: 8px;
+.underline-offset-2 {
+  text-underline-offset: 2px;
+}
+
+.underline-offset-4 {
+  text-underline-offset: 4px;
 }
 
 .opacity-0 {
@@ -992,6 +1013,14 @@ video {
   .sm\:flex-row {
     flex-direction: row;
   }
+
+  .sm\:gap-0 {
+    gap: 0px;
+  }
+
+  .sm\:underline-offset-8 {
+    text-underline-offset: 8px;
+  }
 }
 
 @media (min-width: 768px) {
@@ -1005,6 +1034,10 @@ video {
 
   .md\:mb-10 {
     margin-bottom: 2.5rem;
+  }
+
+  .md\:mb-8 {
+    margin-bottom: 2rem;
   }
 
   .md\:h-16 {
@@ -1035,11 +1068,6 @@ video {
 
   .md\:p-2\.5 {
     padding: 0.625rem;
-  }
-
-  .md\:px-0 {
-    padding-left: 0px;
-    padding-right: 0px;
   }
 
   .md\:px-8 {
@@ -1075,6 +1103,11 @@ video {
     line-height: 2.25rem;
   }
 
+  .md\:text-4xl {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+  }
+
   .md\:text-5xl {
     font-size: 3rem;
     line-height: 1;
@@ -1105,6 +1138,11 @@ video {
 
   .lg\:grid-cols-4 {
     grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .lg\:px-0 {
+    padding-left: 0px;
+    padding-right: 0px;
   }
 }
 
