@@ -937,6 +937,10 @@ video {
   text-underline-offset: 4px;
 }
 
+.underline-offset-8 {
+  text-underline-offset: 8px;
+}
+
 .opacity-0 {
   opacity: 0;
 }
@@ -1083,6 +1087,11 @@ video {
   .md\:py-5 {
     padding-top: 1.25rem;
     padding-bottom: 1.25rem;
+  }
+
+  .md\:px-0 {
+    padding-left: 0px;
+    padding-right: 0px;
   }
 
   .md\:pl-8 {
