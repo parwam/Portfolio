@@ -759,10 +759,6 @@ video {
   gap: 0.125rem;
 }
 
-.gap-1 {
-  gap: 0.25rem;
-}
-
 .gap-2 {
   gap: 0.5rem;
 }
@@ -931,10 +927,6 @@ video {
 
 .underline-offset-2 {
   text-underline-offset: 2px;
-}
-
-.underline-offset-4 {
-  text-underline-offset: 4px;
 }
 
 .opacity-0 {
