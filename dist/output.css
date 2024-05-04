@@ -619,6 +619,16 @@ video {
   margin-right: 0.5rem;
 }
 
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.my-20 {
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+}
+
 .mb-10 {
   margin-bottom: 2.5rem;
 }
@@ -629,6 +639,10 @@ video {
 
 .mb-2 {
   margin-bottom: 0.5rem;
+}
+
+.mb-3 {
+  margin-bottom: 0.75rem;
 }
 
 .mb-5 {
@@ -703,6 +717,10 @@ video {
   max-width: 28rem;
 }
 
+.max-w-mdsm {
+  max-width: 344px;
+}
+
 .cursor-pointer {
   cursor: pointer;
 }
@@ -739,6 +757,10 @@ video {
   flex-direction: column;
 }
 
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
 .items-center {
   align-items: center;
 }
@@ -759,12 +781,28 @@ video {
   gap: 0.125rem;
 }
 
-.gap-1 {
-  gap: 0.25rem;
+.gap-10 {
+  gap: 2.5rem;
+}
+
+.gap-12 {
+  gap: 3rem;
 }
 
 .gap-2 {
   gap: 0.5rem;
+}
+
+.gap-24 {
+  gap: 6rem;
+}
+
+.gap-3 {
+  gap: 0.75rem;
+}
+
+.gap-5 {
+  gap: 1.25rem;
 }
 
 .gap-6 {
@@ -796,8 +834,60 @@ video {
   border-radius: 0.5rem;
 }
 
+.rounded-md {
+  border-radius: 0.375rem;
+}
+
+.rounded-xl {
+  border-radius: 0.75rem;
+}
+
 .border-2 {
   border-width: 2px;
+}
+
+.border-b-6 {
+  border-bottom-width: 6px;
+}
+
+.border-hover-color {
+  --tw-border-opacity: 1;
+  border-color: rgb(108 117 125 / var(--tw-border-opacity));
+}
+
+.bg-color-blue {
+  --tw-bg-opacity: 1;
+  background-color: rgb(85 175 249 / var(--tw-bg-opacity));
+}
+
+.bg-color-green {
+  --tw-bg-opacity: 1;
+  background-color: rgb(99 230 190 / var(--tw-bg-opacity));
+}
+
+.bg-color-pink {
+  --tw-bg-opacity: 1;
+  background-color: rgb(229 153 247 / var(--tw-bg-opacity));
+}
+
+.bg-color-purple {
+  --tw-bg-opacity: 1;
+  background-color: rgb(177 151 252 / var(--tw-bg-opacity));
+}
+
+.bg-color-red {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 135 135 / var(--tw-bg-opacity));
+}
+
+.bg-color-yellow {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 212 59 / var(--tw-bg-opacity));
+}
+
+.bg-color-yellow-dark {
+  --tw-bg-opacity: 1;
+  background-color: rgb(250 176 5 / var(--tw-bg-opacity));
 }
 
 .bg-mainbg-color {
@@ -814,9 +904,23 @@ video {
   padding: 0.25rem;
 }
 
+.p-5 {
+  padding: 1.25rem;
+}
+
+.px-10 {
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+}
+
 .px-2 {
   padding-left: 0.5rem;
   padding-right: 0.5rem;
+}
+
+.px-5 {
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
 }
 
 .px-6 {
@@ -903,6 +1007,10 @@ video {
   font-weight: 700;
 }
 
+.font-extrabold {
+  font-weight: 800;
+}
+
 .font-medium {
   font-weight: 500;
 }
@@ -931,14 +1039,6 @@ video {
 
 .underline-offset-2 {
   text-underline-offset: 2px;
-}
-
-.underline-offset-4 {
-  text-underline-offset: 4px;
-}
-
-.underline-offset-8 {
-  text-underline-offset: 8px;
 }
 
 .opacity-0 {
@@ -973,6 +1073,11 @@ video {
   transition-duration: 100ms;
 }
 
+.hover\:border-font-color:hover {
+  --tw-border-opacity: 1;
+  border-color: rgb(55 53 47 / var(--tw-border-opacity));
+}
+
 .hover\:text-hover-color:hover {
   --tw-text-opacity: 1;
   color: rgb(108 117 125 / var(--tw-text-opacity));
@@ -995,6 +1100,11 @@ video {
 .dark\:text-font-color-dark:is(.dark *) {
   --tw-text-opacity: 1;
   color: rgb(235 235 235 / var(--tw-text-opacity));
+}
+
+.dark\:hover\:border-font-color-dark:hover:is(.dark *) {
+  --tw-border-opacity: 1;
+  border-color: rgb(235 235 235 / var(--tw-border-opacity));
 }
 
 @media (min-width: 640px) {
@@ -1040,6 +1150,10 @@ video {
     margin-bottom: 2.5rem;
   }
 
+  .md\:mb-5 {
+    margin-bottom: 1.25rem;
+  }
+
   .md\:mb-8 {
     margin-bottom: 2rem;
   }
@@ -1056,8 +1170,20 @@ video {
     max-width: 42rem;
   }
 
+  .md\:grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .md\:gap-16 {
+    gap: 4rem;
+  }
+
   .md\:gap-5 {
     gap: 1.25rem;
+  }
+
+  .md\:gap-8 {
+    gap: 2rem;
   }
 
   .md\:space-x-4 > :not([hidden]) ~ :not([hidden]) {
@@ -1087,11 +1213,6 @@ video {
   .md\:py-5 {
     padding-top: 1.25rem;
     padding-bottom: 1.25rem;
-  }
-
-  .md\:px-0 {
-    padding-left: 0px;
-    padding-right: 0px;
   }
 
   .md\:pl-8 {
@@ -1141,17 +1262,34 @@ video {
     max-width: 56rem;
   }
 
+  .lg\:max-w-6xl {
+    max-width: 72rem;
+  }
+
   .lg\:max-w-xl {
     max-width: 36rem;
+  }
+
+  .lg\:grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
   .lg\:grid-cols-4 {
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 
+  .lg\:gap-24 {
+    gap: 6rem;
+  }
+
   .lg\:px-0 {
     padding-left: 0px;
     padding-right: 0px;
+  }
+
+  .lg\:px-10 {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
   }
 }
 
