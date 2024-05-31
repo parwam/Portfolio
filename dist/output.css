@@ -809,6 +809,16 @@ video {
   gap: 1.5rem;
 }
 
+.gap-x-1 {
+  -moz-column-gap: 0.25rem;
+       column-gap: 0.25rem;
+}
+
+.gap-x-5 {
+  -moz-column-gap: 1.25rem;
+       column-gap: 1.25rem;
+}
+
 .gap-x-8 {
   -moz-column-gap: 2rem;
        column-gap: 2rem;
@@ -1002,16 +1012,8 @@ video {
   font-weight: 700;
 }
 
-.font-extrabold {
-  font-weight: 800;
-}
-
 .font-medium {
   font-weight: 500;
-}
-
-.font-black {
-  font-weight: 900;
 }
 
 .italic {
@@ -1136,12 +1138,12 @@ video {
     gap: 0px;
   }
 
-  .sm\:underline-offset-8 {
-    text-underline-offset: 8px;
-  }
-
   .sm\:underline-offset-4 {
     text-underline-offset: 4px;
+  }
+
+  .sm\:underline-offset-8 {
+    text-underline-offset: 8px;
   }
 }
 
@@ -1192,6 +1194,11 @@ video {
 
   .md\:gap-8 {
     gap: 2rem;
+  }
+
+  .md\:gap-x-10 {
+    -moz-column-gap: 2.5rem;
+         column-gap: 2.5rem;
   }
 
   .md\:space-x-4 > :not([hidden]) ~ :not([hidden]) {
