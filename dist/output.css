@@ -653,6 +653,10 @@ video {
   margin-bottom: 1.5rem;
 }
 
+.mt-20 {
+  margin-top: 5rem;
+}
+
 .mt-3 {
   margin-top: 0.75rem;
 }
@@ -862,19 +866,14 @@ video {
   background-color: rgb(99 230 190 / var(--tw-bg-opacity));
 }
 
-.bg-color-pink {
-  --tw-bg-opacity: 1;
-  background-color: rgb(229 153 247 / var(--tw-bg-opacity));
-}
-
 .bg-color-purple {
   --tw-bg-opacity: 1;
   background-color: rgb(177 151 252 / var(--tw-bg-opacity));
 }
 
-.bg-color-red {
+.bg-color-red-light {
   --tw-bg-opacity: 1;
-  background-color: rgb(255 135 135 / var(--tw-bg-opacity));
+  background-color: rgb(255 163 163 / var(--tw-bg-opacity));
 }
 
 .bg-color-yellow {
