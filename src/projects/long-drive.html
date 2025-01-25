@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Parva's Portfolio</title>
 
-    <link href="../dist/output.css" rel="stylesheet" />
+    <link href="/styles/input.css" rel="stylesheet" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
@@ -14,24 +14,24 @@
     <link
       rel="apple-touch-icon"
       sizes="180x180"
-      href="public/favicon-icons/apple-touch-icon.png"
+      href="/favicons/apple-touch-icon.png"
     />
     <link
       rel="icon"
       type="image/png"
       sizes="32x32"
-      href="public/favicon-icons/favicon-32x32.png"
+      href="/favicons/favicon-32x32.png"
     />
     <link
       rel="icon"
       type="image/png"
       sizes="16x16"
-      href="../public/favicon-icons/favicon-16x16.png"
+      href="/favicons/favicon-16x16.png"
     />
-    <link rel="manifest" href="public/favicon-icons/site.webmanifest" />
+    <link rel="manifest" href="/favicons/site.webmanifest" />
     <link
       rel="mask-icon"
-      href="public/favicon-icons/safari-pinned-tab.svg"
+      href="/favicons/safari-pinned-tab.svg"
       color="#5bbad5"
     />
     <meta name="msapplication-TileColor" content="#da532c" />
@@ -47,7 +47,7 @@
     ></script>
   </head>
   <body
-    class="bg-mainbg-color dark:bg-mainbg-color-dark text-font-color dark:text-font-color-dark font-systemui"
+    class="bg-mainbg-color dark:bg-mainbg-color-dark text-font-color dark:text-font-color-dark font-notosans"
   >
     <header
       class="bg-navbar-color dark:bg-navbar-color-dark flex items-center justify-between py-1.5 md:py-3 px-2 md:px-8 mb-10 sticky top-0 z-10"
@@ -56,8 +56,9 @@
         <a href="../index.html">
           <img
             class="h-9 sm:h-12 md:h-16 w-auto pr-0.5 md:pr-2"
-            src="../public/images/profile-icon.png"
+            src="/images/profile-icon.png"
             alt="profile-icon"
+            decoding="async"
           />
         </a>
         <a class="hover:text-hover-color" href="../index.html">
@@ -69,7 +70,7 @@
       </div>
 
       <div class="text-3xl cursor-pointer mx-2 sm:hidden block">
-        <ion-icon name="menu" onclick="Menu(this)"></ion-icon>
+        <ion-icon name="menu" id="navbar-menu-btn"></ion-icon>
       </div>
 
       <div
@@ -122,7 +123,7 @@
       <h2
         class="text-center text-3xl md:text-5xl font-bold underline underline-offset-2 sm:underline-offset-4"
       >
-        Pixel Adventure
+        Long Drive
       </h2>
 
       <!-- <section class="w-full m-auto"> -->
@@ -132,8 +133,8 @@
         <iframe
           width="1905"
           height="754"
-          src="https://www.youtube.com/embed/CdCLFUjtBYA"
-          title="Pixel-Adventure Gameplay"
+          src="https://www.youtube.com/embed/5WXNAoNZvwg"
+          title="LongDrive Gameplay"
           frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           referrerpolicy="strict-origin-when-cross-origin"
@@ -146,7 +147,7 @@
         <div class="flex flex-row justify-center gap-x-5 md:gap-x-10">
           <a
             class="flex flex-row justify-center items-center gap-x-1 font-medium text-color-red-dark text-base md:text-xl text-center"
-            href="https://github.com/parwam/Pixel-Adventure"
+            href="https://github.com/parwam/Long-Drive"
             target="_blank"
             rel="noopener noreferrer"
             ><i class="fa-brands fa-github text-xl"></i>
@@ -157,12 +158,12 @@
 
           <a
             class="flex flex-row justify-center items-center gap-x-1 font-medium text-color-red-dark text-base md:text-xl text-center"
-            href="https://kharva.itch.io/pixel-adventure"
+            href="https://kharva.itch.io/long-drive"
             target="_blank"
             rel="noopener noreferrer"
             ><i class="fa-brands fa-itch-io text-xl"></i>
             <span class="underline decoration-solid hover:no-underline"
-              >Play here</span
+              >Download here</span
             ></a
           >
         </div>
@@ -184,58 +185,39 @@
 
         <ul class="list-outside list-disc pl-5 md:pl-8 text-base md:text-xl">
           <li>
+            An
+            <span class="text-color-red-dark font-medium"
+              >infinite car driving</span
+            >
+            game where you've to avoid collisions with other vehicles in order
+            to really make it a long drive
+          </li>
+          <li>
             A
-            <span class="text-color-red-dark font-medium">2D Platformer</span>
-            game with all mechanics like movement, jump & extra jumps, wall grab
-            & wall jump, dash, attack, flipping, animations
+            <span class="text-color-red-dark font-medium">garage</span> section
+            to choose the car & a road selection menu to choose the environment
           </li>
           <li>
+            Added
             <span class="text-color-red-dark font-medium"
-              >2D patrolling and shooting AI</span
+              >multiple control options:</span
             >
-            for enemy
+            <ol class="list-inside list-decimal">
+              <li>Buttons (Mobile)</li>
+              <li>keyboard Keys (External Keypad)</li>
+              <li>Touch (Mobile)</li>
+              <li>Sensors (Mobile)</li>
+            </ol>
+          </li>
+          <li>Random vehicles & collectibles generation</li>
+          <li>An audio system using singleton design pattern</li>
+          <li>
+            A save system to keep track of score, inventory money, chosen
+            controls - made using PlayerPrefs
           </li>
           <li>
-            <span class="text-color-red-dark font-medium"
-              >Level Management with lock-unlock system</span
-            >
-          </li>
-          <li>
-            Character selection screen with specific movement datas for each
-            character using
-            <span class="text-color-red-dark font-medium"
-              >Scriptable Objects</span
-            >
-            for Data Management
-          </li>
-          <li>
-            <span class="text-color-red-dark font-medium">Audio Manager</span>
-            to play sound effects and random background music on each level -
-            based on
-            <span class="text-color-red-dark font-medium"
-              >singleton design pattern</span
-            >
-          </li>
-          <li>
-            Responsive UI/UX for player's health, collectibles and game states
-            i.e. win, gameover, pause
-          </li>
-          <li>
-            Multiple traps based on
-            <span class="text-color-red-dark font-medium"
-              >Unity physics & joints system</span
-            >
-          </li>
-          <li>
-            <span class="text-color-red-dark font-medium"
-              >Checkpoint system</span
-            >
-            to respawn player based on latest crossed checkpoint
-          </li>
-          <li>
-            Simple save system to keep track of levels, scores, collectibles,
-            checkpoints etc - using
-            <span class="text-color-red-dark font-medium">PlayerPrefs</span>
+            Resoponsive UI/UX for health, score, settings and pause - loss game
+            states
           </li>
         </ul>
       </section>
@@ -288,7 +270,7 @@
       </div> -->
     </footer>
 
-    <script src="../src/navbar-menu.js"></script>
-    <script src="../src/theme-switcher.js"></script>
+    <script type="module" src="/scripts/navbar-menu.js"></script>
+    <script type="module" src="/scripts/theme-switcher.js"></script>
   </body>
 </html>

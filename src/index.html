@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Parva's Portfolio</title>
 
-    <link href="../dist/output.css" rel="stylesheet" />
+    <link href="/styles/input.css" rel="stylesheet" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
@@ -14,24 +14,24 @@
     <link
       rel="apple-touch-icon"
       sizes="180x180"
-      href="public/favicon-icons/apple-touch-icon.png"
+      href="/favicons/apple-touch-icon.png"
     />
     <link
       rel="icon"
       type="image/png"
       sizes="32x32"
-      href="public/favicon-icons/favicon-32x32.png"
+      href="/favicons/favicon-32x32.png"
     />
     <link
       rel="icon"
       type="image/png"
       sizes="16x16"
-      href="../public/favicon-icons/favicon-16x16.png"
+      href="/favicons/favicon-16x16.png"
     />
-    <link rel="manifest" href="public/favicon-icons/site.webmanifest" />
+    <link rel="manifest" href="/favicons/site.webmanifest" />
     <link
       rel="mask-icon"
-      href="public/favicon-icons/safari-pinned-tab.svg"
+      href="/favicons/safari-pinned-tab.svg"
       color="#5bbad5"
     />
     <meta name="msapplication-TileColor" content="#da532c" />
@@ -47,20 +47,21 @@
     ></script>
   </head>
   <body
-    class="bg-mainbg-color dark:bg-mainbg-color-dark text-font-color dark:text-font-color-dark font-systemui"
+    class="bg-mainbg-color dark:bg-mainbg-color-dark text-font-color dark:text-font-color-dark font-notosans flex flex-col min-h-screen"
   >
     <header
       class="bg-navbar-color dark:bg-navbar-color-dark flex items-center justify-between py-1.5 md:py-3 px-2 md:px-8 mb-10 sticky top-0 z-10"
     >
       <div class="flex flex-row items-center">
-        <a href="../index.html">
+        <a href="index.html">
           <img
             class="h-9 sm:h-12 md:h-16 w-auto pr-0.5 md:pr-2"
-            src="../public/images/profile-icon.png"
+            src="/images/profile-icon.png"
             alt="profile-icon"
+            decoding="async"
           />
         </a>
-        <a class="hover:text-hover-color" href="../index.html">
+        <a class="hover:text-hover-color" href="index.html">
           <!-- <div class="flex flex-col"> -->
           <p class="font-bold text-2xl md:text-3xl">Parva</p>
           <!-- <p class="text-xl">Observer, Creator</p> -->
@@ -69,7 +70,7 @@
       </div>
 
       <div class="text-3xl cursor-pointer mx-2 sm:hidden block">
-        <ion-icon name="menu" onclick="Menu(this)"></ion-icon>
+        <ion-icon name="menu" id="navbar-menu-btn"></ion-icon>
       </div>
 
       <div
@@ -78,9 +79,13 @@
         <nav
           class="flex flex-col sm:flex-row gap-0.5 sm:gap-0 space-x-2 md:space-x-4 font-bold text-lg md:text-2xl items-center justify-center"
         >
-          <a class="hover:text-hover-color" href="../index.html">About</a>
-          <a class="hover:text-hover-color" href="../projects.html">Projects</a>
-          <a class="hover:text-hover-color" href="../extras.html">Extras</a>
+          <a
+            class="underline underline-offset-2 sm:underline-offset-8 hover:text-hover-color"
+            href="index.html"
+            >About</a
+          >
+          <a class="hover:text-hover-color" href="projects.html">Projects</a>
+          <a class="hover:text-hover-color" href="extras.html">Extras</a>
 
           <div
             class="text-gray-500 dark:text-gray-400 hover:text-hover-color rounded-lg text-sm p-1 md:p-2.5"
@@ -116,101 +121,33 @@
       </div>
     </header>
 
-    <main
-      class="flex flex-col items-center justify-center gap-12 md:gap-16 lg:gap-24 px-5 lg:px-10 mx-auto my-20 max-w-mdsm md:max-w-2xl lg:max-w-6xl"
-    >
-      <h2
-        class="text-center text-3xl md:text-5xl font-bold underline underline-offset-2 sm:underline-offset-4"
-      >
-        Survival Shooter
-      </h2>
+    <main class="px-6 lg:px-0">
+      <p class="text-3xl md:text-4xl text-center font-bold mb-5 md:mb-8">
+        Observing, Creating
+      </p>
 
-      <!-- <section class="w-full m-auto"> -->
-      <!-- <div
-          class="relative w-full h-auto m-auto border-2 border-gray-400 aspect-w-16 aspect-h-9 mb-2 md:mb-5"
-        >
-          <video controls>
-            <source
-              src="../public/Videos/SurvivalShooter-Gameplay.mp4"
-              type="video/mp4"
-            />
-          </video>
-        </div> -->
-      <div
-        class="relative w-full h-auto m-auto border-2 border-gray-400 aspect-w-16 aspect-h-9"
-      >
-        <iframe
-          width="1905"
-          height="754"
-          src="https://www.youtube.com/embed/GQFlctD-W1s"
-          title="SurvivalShooter Gameplay"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          referrerpolicy="strict-origin-when-cross-origin"
-          allowfullscreen
-        ></iframe>
+      <div class="flex items-center justify-center mb-6">
+        <img
+          class="h-64 sm:h-128"
+          src="/images/banner.webp"
+          alt="about-icon-banner"
+          decoding="async"
+        />
       </div>
-      <!-- </section> -->
 
-      <section class="flex flex-col items-center justify-center gap-5 md:gap-8">
-        <div class="flex flex-row justify-center gap-x-5 md:gap-x-10">
-          <a
-            class="flex flex-row justify-center items-center gap-x-1 font-medium text-color-red-dark text-base md:text-xl text-center"
-            href="https://github.com/parwam/Survival-Shooter"
-            target="_blank"
-            rel="noopener noreferrer"
-            ><i class="fa-brands fa-github text-xl"></i>
-            <span class="underline decoration-solid hover:no-underline"
-              >Source Code</span
-            ></a
-          >
-
-          <a
-            class="flex flex-row justify-center items-center gap-x-1 font-medium text-color-red-dark text-base md:text-xl text-center"
-            href="https://kharva.itch.io/survival-shooter"
-            target="_blank"
-            rel="noopener noreferrer"
-            ><i class="fa-brands fa-itch-io text-xl"></i>
-            <span class="underline decoration-solid hover:no-underline"
-              >Download</span
-            ></a
-          >
-        </div>
-
-        <div
-          class="flex flex-col items-center justify-center flex-wrap gap-3 text-font-color"
-        >
-          <div class="flex flex-row flex-wrap gap-3 text-font-color">
-            <div class="bg-color-blue py-1 px-2 rounded-md">Personal</div>
-            <div class="bg-color-purple py-1 px-2 rounded-md">
-              Game Developer
-            </div>
-          </div>
-          <div class="flex flex-row flex-wrap gap-3 text-font-color">
-            <div class="bg-color-green py-1 px-2 rounded-md">Unity</div>
-            <div class="bg-color-yellow py-1 px-2 rounded-md">C#</div>
-          </div>
-        </div>
-
-        <ul class="list-outside list-disc pl-5 md:pl-8 text-base md:text-xl">
-          <li>
-            A
-            <span class="text-color-red-dark font-medium"
-              >3D survival shooter</span
-            >
-            game inspired from original Unity Learn project, where you have to
-            survival till the end among the zombie like enemies
-          </li>
-          <li>
-            A game menu with options for controlling music and effect volumes
-          </li>
-          <li>Different types of enemies each having different kill points</li>
-        </ul>
-      </section>
+      <div
+        class="max-w-md lg:max-w-2xl mx-auto mb-12 items-center justify-center"
+      >
+        <p class="text-xl md:text-2xl text-center">
+          I love observing everything in and of this existence, then express
+          through creating experiences for any mixture of sensory mediums, by
+          blending the artsy and the engineering side of my being.
+        </p>
+      </div>
     </main>
 
     <footer
-      class="bg-navbar-color dark:bg-navbar-color-dark flex flex-col items-center justify-center py-2.5 md:py-5"
+      class="bg-navbar-color dark:bg-navbar-color-dark flex flex-col items-center justify-center py-2.5 md:py-5 mt-auto"
     >
       <div class="text-2xl md:text-3xl space-x-4">
         <a
@@ -256,7 +193,7 @@
       </div> -->
     </footer>
 
-    <script src="../src/navbar-menu.js"></script>
-    <script src="../src/theme-switcher.js"></script>
+    <script type="module" src="/scripts/navbar-menu.js"></script>
+    <script type="module" src="/scripts/theme-switcher.js"></script>
   </body>
 </html>

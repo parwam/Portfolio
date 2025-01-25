@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Parva's Portfolio</title>
 
-    <link href="dist/output.css" rel="stylesheet" />
+    <link href="/styles/input.css" rel="stylesheet" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
@@ -14,24 +14,24 @@
     <link
       rel="apple-touch-icon"
       sizes="180x180"
-      href="public/favicon-icons/apple-touch-icon.png"
+      href="/favicons/apple-touch-icon.png"
     />
     <link
       rel="icon"
       type="image/png"
       sizes="32x32"
-      href="public/favicon-icons/favicon-32x32.png"
+      href="/favicons/favicon-32x32.png"
     />
     <link
       rel="icon"
       type="image/png"
       sizes="16x16"
-      href="public/favicon-icons/favicon-16x16.png"
+      href="/favicons/favicon-16x16.png"
     />
-    <link rel="manifest" href="public/favicon-icons/site.webmanifest" />
+    <link rel="manifest" href="/favicons/site.webmanifest" />
     <link
       rel="mask-icon"
-      href="public/favicon-icons/safari-pinned-tab.svg"
+      href="/favicons/safari-pinned-tab.svg"
       color="#5bbad5"
     />
     <meta name="msapplication-TileColor" content="#da532c" />
@@ -47,7 +47,7 @@
     ></script>
   </head>
   <body
-    class="bg-mainbg-color dark:bg-mainbg-color-dark text-font-color dark:text-font-color-dark font-systemui"
+    class="bg-mainbg-color dark:bg-mainbg-color-dark text-font-color dark:text-font-color-dark font-notosans"
   >
     <header
       class="bg-navbar-color dark:bg-navbar-color-dark flex items-center justify-between py-1.5 md:py-3 px-2 md:px-8 mb-10 sticky top-0 z-10"
@@ -56,8 +56,9 @@
         <a href="index.html">
           <img
             class="h-9 sm:h-12 md:h-16 w-auto pr-0.5 md:pr-2"
-            src="public/images/profile-icon.png"
+            src="/images/profile-icon.png"
             alt="profile-icon"
+            decoding="async"
           />
         </a>
         <a class="hover:text-hover-color" href="index.html">
@@ -69,7 +70,7 @@
       </div>
 
       <div class="text-3xl cursor-pointer mx-2 sm:hidden block">
-        <ion-icon name="menu" onclick="Menu(this)"></ion-icon>
+        <ion-icon name="menu" id="navbar-menu-btn"></ion-icon>
       </div>
 
       <div
@@ -132,57 +133,71 @@
             <div>
               <img
                 class="h-auto max-w-full rounded-lg"
-                src="public/images/paintings/butterfly.JPG"
-                alt="butterfly painting"
+                src="/images/paintings/butterfly.webp"
+                alt="painting"
+                decoding="async"
               />
             </div>
             <div>
               <img
                 class="h-auto max-w-full rounded-lg"
-                src="public/images/paintings/cock.JPG"
-                alt="cock painting"
+                src="/images/paintings/cock.webp"
+                alt="painting"
+                decoding="async"
               />
             </div>
             <div>
               <img
                 class="h-auto max-w-full rounded-lg"
-                src="public/images/paintings/deer.JPG"
+                src="/images/paintings/deer.webp"
+                alt="painting"
+                decoding="async"
+                loading="lazy"
+              />
+            </div>
+            <div>
+              <img
+                class="h-auto max-w-full rounded-lg"
+                src="/images/paintings/camel.webp"
+                alt="painting"
+                decoding="async"
+                loading="lazy"
+              />
+            </div>
+            <div>
+              <img
+                class="h-auto max-w-full rounded-lg"
+                src="/images/paintings/girls.webp"
+                alt="painting"
+                decoding="async"
+                loading="lazy"
+              />
+            </div>
+            <div>
+              <img
+                class="h-auto max-w-full rounded-lg"
+                src="/images/paintings/kumbhar.webp"
+                alt="painting"
+                decoding="async"
+                loading="lazy"
+              />
+            </div>
+            <div>
+              <img
+                class="h-auto max-w-full rounded-lg"
+                src="/images/paintings/rectangle-design.webp"
+                alt="painting"
+                decoding="async"
+                loading="lazy"
+              />
+            </div>
+            <div>
+              <img
+                class="h-auto max-w-full rounded-lg"
+                src="/images/paintings/save-water.webp"
                 alt="deer painting"
-              />
-            </div>
-            <div>
-              <img
-                class="h-auto max-w-full rounded-lg"
-                src="public/images/paintings/camel.JPG"
-                alt="deer painting"
-              />
-            </div>
-            <div>
-              <img
-                class="h-auto max-w-full rounded-lg"
-                src="public/images/paintings/girls.JPG"
-                alt="deer painting"
-              />
-            </div>
-            <div>
-              <img
-                class="h-auto max-w-full rounded-lg"
-                src="public/images/paintings/kumbhar.JPG"
-                alt="deer painting"
-              />
-            </div>
-            <div>
-              <img
-                class="h-auto max-w-full rounded-lg"
-                src="public/images/paintings/rectangle-design.JPG"
-                alt="deer painting"
-              />
-            </div>
-            <div>
-              <img
-                class="h-auto max-w-full rounded-lg"
-                src="public/images/paintings/save-water.JPG"
-                alt="deer painting"
+                decoding="async"
+                loading="lazy"
               />
             </div>
           </div>
@@ -190,101 +205,62 @@
             <div>
               <img
                 class="h-auto max-w-full rounded-lg"
-                src="public/images/paintings/duck.JPG"
-                alt="duck painting"
+                src="/images/paintings/duck.webp"
+                alt="painting"
+                decoding="async"
               />
             </div>
             <div>
               <img
                 class="h-auto max-w-full rounded-lg"
-                src="public/images/paintings/elephant.JPG"
-                alt="elephant painting"
+                src="/images/paintings/elephant.webp"
+                alt="painting"
+                decoding="async"
               />
             </div>
             <div>
               <img
                 class="h-auto max-w-full rounded-lg"
-                src="public/images/paintings/fish.JPG"
-                alt="fish painting"
+                src="/images/paintings/fish.webp"
+                alt="painting"
+                decoding="async"
+                loading="lazy"
               />
             </div>
             <div>
               <img
                 class="h-auto max-w-full rounded-lg"
-                src="public/images/paintings/bharwad.JPG"
-                alt="deer painting"
+                src="/images/paintings/bharwad.webp"
+                alt="painting"
+                decoding="async"
+                loading="lazy"
               />
             </div>
             <div>
               <img
                 class="h-auto max-w-full rounded-lg"
-                src="public/images/paintings/hexagon-design-2.JPG"
-                alt="deer painting"
+                src="/images/paintings/hexagon-design-2.webp"
+                alt="painting"
+                decoding="async"
+                loading="lazy"
               />
             </div>
             <div>
               <img
                 class="h-auto max-w-full rounded-lg"
-                src="public/images/paintings/lion-story.JPG"
-                alt="deer painting"
+                src="/images/paintings/lion-story.webp"
+                alt="painting"
+                decoding="async"
+                loading="lazy"
               />
             </div>
             <div>
               <img
                 class="h-auto max-w-full rounded-lg"
-                src="public/images/paintings/satya.JPG"
-                alt="deer painting"
-              />
-            </div>
-          </div>
-          <div class="grid gap-6">
-            <div>
-              <img
-                class="h-auto max-w-full rounded-lg"
-                src="public/images/paintings/panihari.JPG"
-                alt="a village woman painting"
-              />
-            </div>
-            <div>
-              <img
-                class="h-auto max-w-full rounded-lg"
-                src="public/images/paintings/parrot.JPG"
-                alt="parrot painting"
-              />
-            </div>
-            <div>
-              <img
-                class="h-auto max-w-full rounded-lg"
-                src="public/images/paintings/overlapping1.JPG"
-                alt="overlapping painting-1"
-              />
-            </div>
-            <div>
-              <img
-                class="h-auto max-w-full rounded-lg"
-                src="public/images/paintings/circle-design.JPG"
-                alt="deer painting"
-              />
-            </div>
-            <div>
-              <img
-                class="h-auto max-w-full rounded-lg"
-                src="public/images/paintings/hexagon-design.JPG"
-                alt="deer painting"
-              />
-            </div>
-            <div>
-              <img
-                class="h-auto max-w-full rounded-lg"
-                src="public/images/paintings/parrot-2.JPG"
-                alt="deer painting"
-              />
-            </div>
-            <div>
-              <img
-                class="h-auto max-w-full rounded-lg"
-                src="public/images/paintings/save-earth.JPG"
-                alt="deer painting"
+                src="/images/paintings/satya.webp"
+                alt="painting"
+                decoding="async"
+                loading="lazy"
               />
             </div>
           </div>
@@ -292,50 +268,125 @@
             <div>
               <img
                 class="h-auto max-w-full rounded-lg"
-                src="public/images/paintings/peacock2.JPG"
-                alt="peacock painting-2"
+                src="/images/paintings/panihari.webp"
+                alt="painting"
+                decoding="async"
               />
             </div>
             <div>
               <img
                 class="h-auto max-w-full rounded-lg"
-                src="public/images/paintings/peacock3.JPG"
-                alt="peacock painting-3"
+                src="/images/paintings/parrot.webp"
+                alt="painting"
+                decoding="async"
               />
             </div>
             <div>
               <img
                 class="h-auto max-w-full rounded-lg"
-                src="public/images/paintings/overlapping2.JPG"
-                alt="overlapping painting-2"
+                src="/images/paintings/overlapping1.webp"
+                alt="painting"
+                decoding="async"
+                loading="lazy"
               />
             </div>
             <div>
               <img
                 class="h-auto max-w-full rounded-lg"
-                src="public/images/paintings/ganpati.JPG"
-                alt="deer painting"
+                src="/images/paintings/circle-design.webp"
+                alt="painting"
+                decoding="async"
+                loading="lazy"
               />
             </div>
             <div>
               <img
                 class="h-auto max-w-full rounded-lg"
-                src="public/images/paintings/kite-festival.JPG"
-                alt="deer painting"
+                src="/images/paintings/hexagon-design.webp"
+                alt="painting"
+                decoding="async"
+                loading="lazy"
               />
             </div>
             <div>
               <img
                 class="h-auto max-w-full rounded-lg"
-                src="public/images/paintings/rabbit-story.JPG"
-                alt="deer painting"
+                src="/images/paintings/parrot-2.webp"
+                alt="painting"
+                decoding="async"
+                loading="lazy"
               />
             </div>
             <div>
               <img
                 class="h-auto max-w-full rounded-lg"
-                src="public/images/paintings/save-energy.JPG"
-                alt="deer painting"
+                src="/images/paintings/save-earth.webp"
+                alt="painting"
+                decoding="async"
+                loading="lazy"
+              />
+            </div>
+          </div>
+          <div class="grid gap-6">
+            <div>
+              <img
+                class="h-auto max-w-full rounded-lg"
+                src="/images/paintings/peacock1.webp"
+                alt="painting"
+                decoding="async"
+              />
+            </div>
+            <div>
+              <img
+                class="h-auto max-w-full rounded-lg"
+                src="/images/paintings/peacock2.webp"
+                alt="painting"
+                decoding="async"
+              />
+            </div>
+            <div>
+              <img
+                class="h-auto max-w-full rounded-lg"
+                src="/images/paintings/overlapping2.webp"
+                alt="painting"
+                decoding="async"
+                loading="lazy"
+              />
+            </div>
+            <div>
+              <img
+                class="h-auto max-w-full rounded-lg"
+                src="/images/paintings/ganpati.webp"
+                alt="painting"
+                decoding="async"
+                loading="lazy"
+              />
+            </div>
+            <div>
+              <img
+                class="h-auto max-w-full rounded-lg"
+                src="/images/paintings/kite-festival.webp"
+                alt="painting"
+                decoding="async"
+                loading="lazy"
+              />
+            </div>
+            <div>
+              <img
+                class="h-auto max-w-full rounded-lg"
+                src="/images/paintings/rabbit-story.webp"
+                alt="painting"
+                decoding="async"
+                loading="lazy"
+              />
+            </div>
+            <div>
+              <img
+                class="h-auto max-w-full rounded-lg"
+                src="/images/paintings/save-energy.webp"
+                alt="painting"
+                decoding="async"
+                loading="lazy"
               />
             </div>
           </div>
@@ -401,7 +452,7 @@
       </div> -->
     </footer>
 
-    <script src="src/navbar-menu.js"></script>
-    <script src="src/theme-switcher.js"></script>
+    <script type="module" src="/scripts/navbar-menu.js"></script>
+    <script type="module" src="/scripts/theme-switcher.js"></script>
   </body>
 </html>

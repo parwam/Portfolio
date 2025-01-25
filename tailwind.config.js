@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+
 module.exports = {
   content: ["./src/**/*.{html,js}", "./*.html", "projects/*.html"],
 
@@ -6,9 +7,10 @@ module.exports = {
 
   theme: {
     fontFamily: {
-      systemui: ["system-ui", "sans-serif"],
-      segoe: ["Segoe UI", "serif"],
-      serif: ["DM Sans", "serif"],
+      notosans: ["NotoSans", "systemui"],
+      // systemui: ["system-ui", "sans-serif"],
+      // segoe: ["Segoe UI", "serif"],
+      // serif: ["DM Sans", "serif"],
     },
 
     colors: {
@@ -42,11 +44,11 @@ module.exports = {
       },
 
       borderWidth: {
-        '6': "6px"
+        6: "6px",
       },
 
       maxWidth: {
-        'mdsm': "344px"
+        mdsm: "344px",
       },
     },
   },
