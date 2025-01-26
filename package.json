@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "purgecss": "purgecss --css src/styles/fontawesome.css --content 'src/**/*.html' --output src/styles/fontawesome.min.css",
     "dev": "vite",
     "build": "vite build",
     "build:watch": "vite build --watch",
@@ -13,6 +14,7 @@
     "autoprefixer": "^10.4.20",
     "fast-glob": "^3.3.3",
     "postcss": "^8.5.1",
+    "purgecss": "^7.0.2",
     "sharp": "^0.33.5",
     "svgo": "^3.3.2",
     "tailwindcss": "^3.4.17",

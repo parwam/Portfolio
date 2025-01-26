@@ -23,3 +23,4 @@ package.jsongit
 
 #Production
 dist/*
+src/styles/fontawesome.css
