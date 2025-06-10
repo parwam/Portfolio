@@ -19,6 +19,7 @@ const themeCheck = () => {
     moonIcon.classList.add("display-none");
     return;
   }
+  
   sunIcon.classList.add("display-none");
 };
 

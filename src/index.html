@@ -1,6 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <script>
+      let theme = localStorage.getItem("theme");
+
+      if (!theme) {
+        theme = window.matchMedia("(prefers-color-scheme: dark)").matches
+          ? "dark"
+          : "light";
+      }
+
+      document.documentElement.classList.toggle("dark", theme === "dark");
+      document.documentElement.setAttribute("data-theme", theme);
+    </script>
+
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Parva's Portfolio</title>
@@ -162,10 +175,7 @@
         /> -->
         <picture>
           <source media="(max-width: 639px)" srcset="/images/banner-360.webp" />
-          <source
-            media="(min-width: 640px)"
-            srcset="/images/banner-768.webp"
-          />
+          <source media="(min-width: 640px)" srcset="/images/banner-768.webp" />
           <img
             class="h-64 sm:h-128"
             src="/images/banner-1024.webp"
