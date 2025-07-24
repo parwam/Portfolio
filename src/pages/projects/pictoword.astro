@@ -1,0 +1,55 @@
+---
+import ProjectDetails from "@/layouts/ProjectDetails.astro";
+import IconGithub from "@/components/icons/IconGithub.astro";
+import Tag from "@/components/Tag.astro";
+---
+
+<ProjectDetails projectDetails={{ name: "PictoWord" }}>
+  <slot slot="project-showcase">
+    <div class="project-yt-vd">
+      <iframe
+        width="1905"
+        height="754"
+        src="https://www.youtube.com/embed/YZ64Bb5IGM4"
+        title="PictoWord Gameplay"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen></iframe>
+    </div>
+  </slot>
+
+  <slot slot="project-refs">
+    <a
+      class="project-link"
+      href="https://github.com/parwam/Picto-Word"
+      target="_blank"
+      rel="noopener noreferrer"
+      ><IconGithub styleClass="" />
+      <span class="project-link-text">Source Code</span></a
+    >
+  </slot>
+
+  <slot slot="project-tags">
+    <div class="project-tag-container">
+      <Tag tagDetails={{ name: "Personal", styleClass: "bg-cyan" }} />
+      <Tag tagDetails={{ name: "Game Developer", styleClass: "bg-purple" }} />
+    </div>
+    <div class="project-tag-container">
+      <Tag tagDetails={{ name: "Unity", styleClass: "bg-pink" }} />
+      <Tag tagDetails={{ name: "C#", styleClass: "bg-pink" }} />
+      <Tag tagDetails={{ name: "PHP", styleClass: "bg-pink" }} />
+      <Tag tagDetails={{ name: "MySQL", styleClass: "bg-pink" }} />
+    </div>
+  </slot>
+
+  <slot slot="project-description">
+    <li>
+      A
+      <span class="font-semibold">picture-word puzzle</span>
+      game with
+      <span class="font-semibold">database management through PHP-MySQL</span>
+    </li>
+    <li>Locked-Unlocked level UI with responsive score UI</li>
+  </slot>
+</ProjectDetails>

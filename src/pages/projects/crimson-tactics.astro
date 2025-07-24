@@ -1,0 +1,99 @@
+---
+import ProjectDetails from "@/layouts/ProjectDetails.astro";
+import IconSteam from "@/components/icons/IconSteam.astro";
+import Tag from "@/components/Tag.astro";
+---
+
+<ProjectDetails projectDetails={{ name: "Crimson Tactics" }}>
+  <slot slot="project-showcase">
+    <div class="project-yt-vd">
+      <iframe
+        src="https://www.youtube.com/embed/mal0ApRKU58"
+        title="Crimson Tactics: The Rise of The White Banner - RELEASE GAMEPLAY TRAILER"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen></iframe>
+    </div>
+
+    <div class="project-yt-vd">
+      <iframe
+        src="https://www.youtube.com/embed/n-WycI99360"
+        title="Crimson Tactics: The Rise of The White Banner - STORY TRAILER"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen></iframe>
+    </div>
+  </slot>
+
+  <slot slot="project-refs">
+    <a
+      class="project-link"
+      href="https://store.steampowered.com/app/1480810/Crimson_Tactics_The_Rise_of_The_White_Banner/"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <IconSteam styleClass="" />
+      <span class="project-link-text">Game Website</span></a
+    >
+  </slot>
+
+  <slot slot="project-tags">
+    <div class="project-tag-container">
+      <Tag tagDetails={{ name: "Professional", styleClass: "bg-cyan" }} />
+      <Tag tagDetails={{ name: "Game Programmer", styleClass: "bg-purple" }} />
+    </div>
+    <div class="project-tag-container">
+      <Tag tagDetails={{ name: "Unity", styleClass: "bg-pink" }} />
+      <Tag tagDetails={{ name: "C#", styleClass: "bg-pink" }} />
+      <Tag tagDetails={{ name: "FMOD", styleClass: "bg-pink" }} />
+    </div>
+  </slot>
+
+  <slot slot="project-description">
+    <li>
+      During my time at
+      <span class="font-semibold">Black March Studios</span>, we worked on
+      Crimson Tactics: The Rise of The White Banner, a
+      <span class="font-semibold">turn-based tactical RPG</span>
+      and shipped it on steam
+    </li>
+    <li>
+      In an agile environment with CI/CD process, I got to work very closely
+      with people across all the departments, involve in implementing features
+      from
+      <span class="font-semibold">early design to testing to final build</span>
+      and experience all aspects of the whole game making process
+    </li>
+    <li>
+      Implemented a complex
+      <span class="font-semibold">shop, try & buy and inventory system</span>
+    </li>
+    <li>
+      Built a
+      <span class="font-semibold">recruitment system</span>, implemented guild
+      and stable sections
+    </li>
+    <li>
+      Created a dynamic
+      <span class="font-semibold">archive system</span>
+      to lock-unlock content based on story-arc progression and player choices
+    </li>
+    <li>
+      Developed a
+      <span class="font-semibold">mount management</span>
+      system and extended the
+      <span class="font-semibold">party management system</span>
+      for integration of complex class change and character dismissal system
+    </li>
+    <li>
+      Added gameplay features such as cutscene auto mode, gameplay speed
+      options, water walk, mount death sequence etc. here and there across the
+      game
+    </li>
+    <li>
+      Responsible for whole game's
+      <span class="font-semibold">UI/UX</span> and polishing, asset management plus
+      clean up
+    </li>
+  </slot>
+</ProjectDetails>

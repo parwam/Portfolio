@@ -1,0 +1,80 @@
+---
+import ProjectDetails from "@/layouts/ProjectDetails.astro";
+import IconSteam from "@/components/icons/IconSteam.astro";
+import Tag from "@/components/Tag.astro";
+---
+
+<ProjectDetails projectDetails={{ name: "Detective Dotson" }}>
+  <slot slot="project-showcase">
+    <div class="project-yt-vd">
+      <iframe
+        src="https://www.youtube.com/embed/RQ8YvZxHafY"
+        title="Detective Dotson trailer - It's a game and a show!"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen></iframe>
+    </div>
+
+    <div class="project-yt-vd">
+      <iframe
+        src="https://www.youtube.com/embed/bReR_9Dhc3U"
+        title="Detective Dotson Gameplay Trailer (November 2024)"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen></iframe>
+    </div>
+  </slot>
+
+  <slot slot="project-refs">
+    <a
+      class="project-link"
+      href="https://store.steampowered.com/app/2450840/Detective_Dotson/"
+      target="_blank"
+      rel="noopener noreferrer"
+      ><IconSteam styleClass="" />
+      <span class="project-link-text">Game Website</span></a
+    >
+  </slot>
+
+  <slot slot="project-tags">
+    <div class="project-tag-container">
+      <Tag tagDetails={{ name: "Professional", styleClass: "bg-cyan" }} />
+      <Tag tagDetails={{ name: "Game Developer", styleClass: "bg-purple" }} />
+    </div>
+    <div class="project-tag-container">
+      <Tag tagDetails={{ name: "Unity", styleClass: "bg-pink" }} />
+      <Tag tagDetails={{ name: "C#", styleClass: "bg-pink" }} />
+    </div>
+  </slot>
+
+  <slot slot="project-description">
+    <li>
+      During my time at
+      <span class="font-semibold">Masala Games</span>, I got to work on
+      Detective Dotson, a story driven
+      <span class="font-semibold">mystery adventure game</span>
+      set in modern day India.
+    </li>
+    <li>
+      In a small diverse team with an open and free environment, I got to work
+      very closely with people of all departments and experience the iterative
+      design loop of game making.
+    </li>
+    <li>
+      Developed systems for
+      <span class="font-semibold"
+        >interactive environment music, dynamic emotion based character voices</span
+      >
+      and made it easy for designers to modify the related fields in-editor.
+    </li>
+    <li>
+      Added interesting effect sounds across the game for UI/UX, character
+      movement, environment interactions etc.
+    </li>
+    <li>
+      Designed different arcs for
+      <span class="font-semibold">quest system</span>
+      and implemented certain game mechanics here and there.
+    </li>
+  </slot>
+</ProjectDetails>

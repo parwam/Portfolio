@@ -1,0 +1,150 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import ProjectCard from "@/components/ProjectCard.astro";
+
+const metadata = {
+  title: "Projects | Parva's Portfolio",
+  description:
+    "Learn top computer courses with V.Vidhya. From programming to graphic design, boost your skills and indulge your creativity to do real work with the help of technology.",
+};
+---
+
+<BaseLayout metadata={metadata} navSection="projects">
+  <main
+    class="flex flex-col items-center justify-center gap-24 px-10 mx-auto max-w-mdsm md:max-w-2xl lg:max-w-6xl"
+  >
+    <section>
+      <h2
+        class="text-center text-font-color-sec text-3xl md:text-5xl font-bold"
+      >
+        <!-- underline underline-offset-2 sm:underline-offset-4 -->
+        Game Development
+      </h2>
+
+      <section>
+        <h3
+          class="text-center text-font-color-sec text-2xl md:text-4xl font-bold mt-20 mb-10 italic"
+        >
+          Professional
+        </h3>
+
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 justify-center mx-auto"
+        >
+          <ProjectCard
+            projectDetails={{
+              refLink: "/projects/crimson-tactics/",
+              posterImage: "/images/gamedev-projects/ct-poster.webp",
+              name: "Crimson Tactics",
+              description:
+                "Crimson Tactics: The Rise of The White Banner brings you an epic adventure in the form of a turn-based tactical RPG",
+              toolTags: ["Unity", "C#", "FMOD"],
+            }}
+          />
+
+          <ProjectCard
+            projectDetails={{
+              refLink: "/projects/detective-dotson/",
+              posterImage: "/images/gamedev-projects/dotson-poster.webp",
+              name: "Detective Dotson",
+              description:
+                "A mystery adventure game set in modern-day India that puts you in the role of Dotson, a reluctant detective who wants to be a bollywood star",
+              toolTags: ["Unity", "C#"],
+            }}
+          />
+
+          <ProjectCard
+            projectDetails={{
+              refLink: "/projects/storypix/",
+              posterImage: "/images/gamedev-projects/storypix-poster.webp",
+              name: "StoryPix",
+              description:
+                "An interactive storytelling platform led by UGC for readers, storytellers & content creators",
+              toolTags: ["Unity", "C#"],
+            }}
+          />
+        </div>
+      </section>
+
+      <section>
+        <h3
+          class="text-center text-font-color-sec text-2xl md:text-4xl font-bold mt-20 mb-10 italic"
+        >
+          Personal
+        </h3>
+
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 justify-center mx-auto"
+        >
+          <ProjectCard
+            projectDetails={{
+              refLink: "/projects/space-invaders/",
+              posterImage: "/images/gamedev-projects/spaceinvaders-poster.webp",
+              name: "Space Invaders",
+              description:
+                "A fast-paced Space Invaders game, where you have to survive amongst different sets of enemies",
+              toolTags: ["C++", "SFML", "CMake"],
+            }}
+          />
+
+          <ProjectCard
+            projectDetails={{
+              refLink: "/projects/knotty-snake/",
+              posterImage: "/images/gamedev-projects/knottysnake-poster.webp",
+              name: "Knotty Snake",
+              description:
+                "A fast-paced snake game with local multi-player mode, spiced with various power-ups and foods",
+              toolTags: ["Unity", "C#"],
+            }}
+          />
+
+          <ProjectCard
+            projectDetails={{
+              refLink: "/projects/survival-shooter/",
+              posterImage:
+                "/images/gamedev-projects/survivalshooter-poster.webp",
+              name: "Survival Shooter",
+              description:
+                "A 3D survival shooter game where you have to survival till the end among the zombie like enemies",
+              toolTags: ["Unity", "C#"],
+            }}
+          />
+
+          <ProjectCard
+            projectDetails={{
+              refLink: "/projects/pixel-adventure/",
+              posterImage:
+                "/images/gamedev-projects/pixeladventure-poster.webp",
+              name: "Pixel Adventure",
+              description:
+                "A pixel adventure inspired 2D platformer game, where you have to pass through levels avoiding different types of enemies and traps",
+              toolTags: ["Unity", "C#"],
+            }}
+          />
+
+          <ProjectCard
+            projectDetails={{
+              refLink: "/projects/pictoword/",
+              posterImage: "/images/gamedev-projects/pictoword-poster.webp",
+              name: "Picto Word",
+              description:
+                "A picture-word puzzle game with database management through PHP-MySQL",
+              toolTags: ["Unity", "C#"],
+            }}
+          />
+
+          <ProjectCard
+            projectDetails={{
+              refLink: "/projects/long-drive/",
+              posterImage: "/images/gamedev-projects/longdrive-poster.webp",
+              name: "Long Drive",
+              description:
+                "An infinite car driving game where you've to avoid collisions with other vehicles in order to really make it a long drive",
+              toolTags: ["Unity", "C#"],
+            }}
+          />
+        </div>
+      </section>
+    </section>
+  </main>
+</BaseLayout>

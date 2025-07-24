@@ -1,0 +1,39 @@
+@layer base {
+  :root {
+    --header-height: 52px;
+    --main-section-pt: 40px;
+    --main-section-pb: 40px;
+  }
+
+  @media (min-width: 640px) {
+    :root {
+      --header-height: 64px;
+    }
+  }
+
+  @media (min-width: 768px) {
+    :root {
+      --header-height: 88px;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    :root {
+      --header-height: 94px;
+    }
+  }
+
+  html {
+    @apply scroll-smooth;
+  }
+
+  body {
+    @apply flex flex-col min-h-screen bg-background font-tiempostext text-foreground selection:bg-accent/75 selection:text-background;
+  }
+
+  main {
+    padding-top: calc(var(--header-height) + var(--main-section-pt));
+    padding-bottom: var(--main-section-pb);
+    @apply mt-10 mb-20;
+  }
+}

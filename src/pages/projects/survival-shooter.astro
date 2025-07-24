@@ -1,0 +1,64 @@
+---
+import ProjectDetails from "@/layouts/ProjectDetails.astro";
+import IconGithub from "@/components/icons/IconGithub.astro";
+import IconItch from "@/components/icons/IconItch.astro";
+import Tag from "@/components/Tag.astro";
+---
+
+<ProjectDetails projectDetails={{ name: "Survival Shooter" }}>
+  <slot slot="project-showcase">
+    <div class="project-yt-vd">
+      <iframe
+        width="1905"
+        height="754"
+        src="https://www.youtube.com/embed/GQFlctD-W1s"
+        title="SurvivalShooter Gameplay"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen></iframe>
+    </div>
+  </slot>
+
+  <slot slot="project-refs">
+    <a
+      class="project-link"
+      href="https://github.com/parwam/Survival-Shooter"
+      target="_blank"
+      rel="noopener noreferrer"
+      ><IconGithub styleClass="" />
+      <span class="project-link-text">Source Code</span></a
+    >
+
+    <a
+      class="project-link"
+      href="https://kharva.itch.io/survival-shooter"
+      target="_blank"
+      rel="noopener noreferrer"
+      ><IconItch styleClass="" />
+      <span class="project-link-text">Download</span></a
+    >
+  </slot>
+
+  <slot slot="project-tags">
+    <div class="project-tag-container">
+      <Tag tagDetails={{ name: "Personal", styleClass: "bg-cyan" }} />
+      <Tag tagDetails={{ name: "Game Developer", styleClass: "bg-purple" }} />
+    </div>
+    <div class="project-tag-container">
+      <Tag tagDetails={{ name: "Unity", styleClass: "bg-pink" }} />
+      <Tag tagDetails={{ name: "C#", styleClass: "bg-pink" }} />
+    </div>
+  </slot>
+
+  <slot slot="project-description">
+    <li>
+      A
+      <span class="font-semibold">3D survival shooter</span>
+      game inspired from original Unity Learn project, where you have to survival
+      till the end among the zombie like enemies
+    </li>
+    <li>A game menu with options for controlling music and effect volumes</li>
+    <li>Different types of enemies each having different kill points</li>
+  </slot>
+</ProjectDetails>

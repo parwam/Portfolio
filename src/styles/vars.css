@@ -1,0 +1,72 @@
+@custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
+
+:root,
+html[data-theme="light"] {
+  --background: #fffdee;
+  --navbar: #f2f0e4;
+
+  --foreground: #0f0f0f;
+  --texthover: #6f6e69;
+  --accent: #4385bf;
+
+  --border: #b8b5ac;
+  --borderhover: #6f6e69;
+
+  --projectcard: #e6e4d8;
+  --projectlink: #d14d41;
+  --tag: #e8705f;
+
+  --yellow: #eccb60;
+  --green: #bec97d;
+  --cyan: #86d3c3;
+  --purple: #c4b9e1;
+  --pink: #e47da8;
+}
+
+html[data-theme="dark"] {
+  --background: #1c1b19;
+  --navbar: #0f0f0f;
+
+  --foreground: #fffdf0;
+  --texthover: #868580;
+  --accent: #db702c;
+
+  --border: #3f3e3c;
+  --borderhover: #868580;
+
+  --projectcard: #000000;
+  --projectlink: #e8705f;
+  --tag: #d14d41;
+
+  /* --yellow: #dfb42f; */
+  --yellow: #d0a316;
+  /* --green: #a0af54; */
+  --green: #869a39;
+  /* --cyan: #5abdab; */
+  --cyan: #3aa9a0;
+  /* --purple: #a699cf; */
+  --purple: #8a7ec8;
+  --pink: #ce5c97;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-navbar: var(--navbar);
+
+  --color-foreground: var(--foreground);
+  --color-accent: var(--accent);
+  --color-texthover: var(--texthover);
+
+  --color-border: var(--border);
+  --color-borderhover: var(--borderhover);
+
+  --color-projectcard: var(--projectcard);
+  --color-projectlink: var(--projectlink);
+  --color-tag: var(--tag);
+
+  --color-yellow: var(--yellow);
+  --color-green: var(--green);
+  --color-cyan: var(--cyan);
+  --color-purple: var(--purple);
+  --color-pink: var(--pink);
+}

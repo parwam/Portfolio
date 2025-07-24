@@ -1,0 +1,79 @@
+---
+import ProjectDetails from "@/layouts/ProjectDetails.astro";
+import IconItch from "@/components/icons/IconItch.astro";
+import IconGithub from "@/components/icons/IconGithub.astro";
+import Tag from "@/components/Tag.astro";
+---
+
+<ProjectDetails projectDetails={{ name: "Knotty Snake" }}>
+  <slot slot="project-showcase">
+    <div class="project-yt-vd">
+      <iframe
+        src="https://www.youtube.com/embed/vDkErKck6YA"
+        title="KnottySnake Gameplay"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen></iframe>
+    </div>
+  </slot>
+
+  <slot slot="project-refs">
+    <a
+      class="project-link"
+      href="https://github.com/parwam/Knotty-Snake"
+      target="_blank"
+      rel="noopener noreferrer"
+      ><IconGithub styleClass="" />
+      <span class="project-link-text">Source Code</span></a
+    >
+
+    <a
+      class="project-link"
+      href="https://parwam.itch.io/knotty-snake"
+      target="_blank"
+      rel="noopener noreferrer"
+      ><IconItch styleClass="" />
+      <span class="project-link-text">Play</span></a
+    >
+  </slot>
+
+  <slot slot="project-tags">
+    <div class="project-tag-container">
+      <Tag tagDetails={{ name: "Personal", styleClass: "bg-cyan" }} />
+      <Tag tagDetails={{ name: "Game Developer", styleClass: "bg-purple" }} />
+    </div>
+    <div class="project-tag-container">
+      <Tag tagDetails={{ name: "Unity", styleClass: "bg-pink" }} />
+      <Tag tagDetails={{ name: "C#", styleClass: "bg-pink" }} />
+    </div>
+  </slot>
+
+  <slot slot="project-description">
+    <li>
+      A fast-paced snake game with local multi-player mode with all the core
+      functionalities of a classic snake game
+    </li>
+    <li>Various power-ups & foods with specific cause-effect</li>
+    <li>
+      <span class="font-semibold"
+        >Generic item spawning system based on Object Pooling</span
+      >, with Random Positions, Probability Distribution, Variable Life-time,
+      Effect Duration & Cool-Down
+    </li>
+    <li>
+      A
+      <span class="font-semibold"
+        >local two player mode with modularity for the extensibility of more
+        players</span
+      >
+    </li>
+    <li>
+      AudioManager to play specific or randomised background music, to play
+      sound effects, to change music on level change etc.
+    </li>
+    <li>
+      UI/UX for game states (win, lose, draw), pause, settings, health, title
+      screen etc.
+    </li>
+  </slot>
+</ProjectDetails>

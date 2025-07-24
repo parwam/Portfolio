@@ -1,0 +1,18 @@
+---
+
+---
+
+<script is:inline data-astro-rerun>
+  (function () {
+    let themeValue = localStorage.getItem("theme") || "auto";
+
+    if (themeValue === "auto") {
+      themeValue = window.matchMedia("(prefers-color-scheme: dark)").matches
+        ? "dark"
+        : "light";
+    }
+
+    document.documentElement.setAttribute("data-theme", themeValue);
+    document.documentElement.classList.toggle("dark", themeValue === "dark");
+  })();
+</script>

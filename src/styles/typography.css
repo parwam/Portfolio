@@ -1,0 +1,60 @@
+@plugin '@tailwindcss/typography';
+
+@layer base {
+  @font-face {
+    font-display: swap;
+    font-family: "TiemposText";
+    font-style: normal;
+    font-weight: 400;
+    src: url("/fonts/TiemposText-Regular.otf") format("opentype");
+  }
+  @font-face {
+    font-display: swap;
+    font-family: "TiemposText";
+    font-style: italic;
+    font-weight: 400;
+    src: url("/fonts/TiemposText-Regular-Italic.otf") format("opentype");
+  }
+  @font-face {
+    font-display: swap;
+    font-family: "TiemposText";
+    font-style: normal;
+    font-weight: 500;
+    src: url("/fonts/TiemposText-Medium.otf") format("opentype");
+  }
+  @font-face {
+    font-display: swap;
+    font-family: "TiemposText";
+    font-style: italic;
+    font-weight: 500;
+    src: url("/fonts/TiemposText-Medium-Italic.otf") format("opentype");
+  }
+  @font-face {
+    font-display: swap;
+    font-family: "TiemposText";
+    font-style: normal;
+    font-weight: 600;
+    src: url("/fonts/TiemposText-Semibold.otf") format("opentype");
+  }
+  @font-face {
+    font-display: swap;
+    font-family: "TiemposText";
+    font-style: italic;
+    font-weight: 600;
+    src: url("/fonts/TiemposText-Semibold-Italic.otf") format("opentype");
+  }
+  @font-face {
+    font-display: swap;
+    font-family: "TiemposText";
+    font-style: normal;
+    font-weight: 700;
+    src: url("/fonts/TiemposText-Bold.otf") format("opentype");
+  }
+  @font-face {
+    font-display: swap;
+    font-family: "TiemposText";
+    font-style: italic;
+    font-weight: 700;
+    src: url("/fonts/TiemposText-Bold-Italic.otf") format("opentype");
+  }
+}

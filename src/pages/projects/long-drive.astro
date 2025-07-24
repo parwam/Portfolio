@@ -1,0 +1,86 @@
+---
+import ProjectDetails from "@/layouts/ProjectDetails.astro";
+import IconGithub from "@/components/icons/IconGithub.astro";
+import IconItch from "@/components/icons/IconItch.astro";
+import Tag from "@/components/Tag.astro";
+---
+
+<ProjectDetails projectDetails={{ name: "Long Drive" }}>
+  <slot slot="project-showcase">
+    <div class="project-yt-vd">
+      <iframe
+        width="1905"
+        height="754"
+        src="https://www.youtube.com/embed/5WXNAoNZvwg"
+        title="LongDrive Gameplay"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen></iframe>
+    </div>
+  </slot>
+
+  <slot slot="project-refs">
+    <a
+      class="project-link"
+      href="https://github.com/parwam/Long-Drive"
+      target="_blank"
+      rel="noopener noreferrer"
+      ><IconGithub styleClass="" />
+      <span class="project-link-text">Source Code</span></a
+    >
+
+    <a
+      class="project-link"
+      href="https://kharva.itch.io/long-drive"
+      target="_blank"
+      rel="noopener noreferrer"
+      ><IconItch styleClass="" />
+      <span class="project-link-text">Download</span></a
+    >
+  </slot>
+
+  <slot slot="project-tags">
+    <div class="project-tag-container">
+      <Tag tagDetails={{ name: "Personal", styleClass: "bg-cyan" }} />
+      <Tag tagDetails={{ name: "Game Developer", styleClass: "bg-purple" }} />
+    </div>
+    <div class="project-tag-container">
+      <Tag tagDetails={{ name: "Unity", styleClass: "bg-pink" }} />
+      <Tag tagDetails={{ name: "C#", styleClass: "bg-pink" }} />
+    </div>
+  </slot>
+
+  <slot slot="project-description">
+    <li>
+      An
+      <span class="font-semibold">infinite car driving</span>
+      game where you've to avoid collisions with other vehicles in order to really
+      make it a long drive
+    </li>
+    <li>
+      A
+      <span class="font-semibold">garage</span> section to choose the car & a road
+      selection menu to choose the environment
+    </li>
+    <li>
+      Added
+      <span class="font-semibold">multiple control options:</span>
+      <ol class="list-inside list-decimal">
+        <li>Buttons (Mobile)</li>
+        <li>keyboard Keys (External Keypad)</li>
+        <li>Touch (Mobile)</li>
+        <li>Sensors (Mobile)</li>
+      </ol>
+    </li>
+    <li>Random vehicles & collectibles generation</li>
+    <li>An audio system using singleton design pattern</li>
+    <li>
+      A save system to keep track of score, inventory money, chosen controls -
+      made using PlayerPrefs
+    </li>
+    <li>
+      Resoponsive UI/UX for health, score, settings and pause - loss game states
+    </li>
+  </slot>
+</ProjectDetails>

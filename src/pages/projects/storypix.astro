@@ -1,0 +1,65 @@
+---
+import ProjectDetails from "@/layouts/ProjectDetails.astro";
+import IconSite from "@/components/icons/IconSite.astro";
+import Tag from "@/components/Tag.astro";
+---
+
+<ProjectDetails projectDetails={{ name: "StoryPix" }}>
+  <slot slot="project-showcase">
+    <div class="project-yt-vd">
+      <iframe
+        src="https://www.youtube.com/embed/FaCqbnlAfVc"
+        title="Introducing StoryPix - India's biggest UGC led interactive storytelling platform"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen></iframe>
+    </div>
+  </slot>
+
+  <slot slot="project-refs">
+    <a
+      class="project-link"
+      href="https://web.archive.org/web/20220614121302/https://www.storypix.in/"
+      target="_blank"
+      rel="noopener noreferrer"
+      ><IconSite styleClass="" />
+      <span class="project-link-text">Game Website</span></a
+    >
+  </slot>
+
+  <slot slot="project-tags">
+    <div class="project-tag-container">
+      <Tag tagDetails={{ name: "Professional", styleClass: "bg-cyan" }} />
+      <Tag tagDetails={{ name: "Game Programmer", styleClass: "bg-purple" }} />
+    </div>
+    <div class="project-tag-container">
+      <Tag tagDetails={{ name: "Unity", styleClass: "bg-pink" }} />
+      <Tag tagDetails={{ name: "C#", styleClass: "bg-pink" }} />
+    </div>
+  </slot>
+
+  <slot slot="project-description">
+    <li>
+      Joining as a college intern and later full time at
+      <span class="font-semibold">Underdogs Studio</span>, I worked on StoryPix
+      project which is an
+      <span class="font-semibold">interactive storytelling mobile platform</span
+      >
+    </li>
+    <li>
+      Majorly I was responsible for generating new content and polishing UI/UX
+    </li>
+    <li>
+      During the production cycle, I was involved at multiple stages i.e. early
+      content design, development, QA - working closely with game designers and
+      artists
+    </li>
+    <li>
+      Implemented basic
+      <span class="font-semibold">game interactions, UI/UX and animations</span>
+    </li>
+    <li>
+      Handled <span class="font-semibold">QA</span> of new generated content
+    </li>
+  </slot>
+</ProjectDetails>

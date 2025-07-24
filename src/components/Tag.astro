@@ -1,0 +1,17 @@
+---
+interface Props {
+  tagDetails: {
+    name: string;
+    styleClass: string;
+  };
+}
+
+const {
+  tagDetails = {
+    name: "Tool Name",
+    styleClass: "",
+  },
+} = Astro.props;
+---
+
+<div class=`${tagDetails.styleClass} py-1 px-2 rounded-md font-medium`>{tagDetails.name}</div>

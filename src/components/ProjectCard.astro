@@ -1,0 +1,55 @@
+---
+import LinkPage from "./LinkPage.astro";
+import Tag from "./Tag.astro";
+
+interface Props {
+  projectDetails: {
+    refLink: string;
+    posterImage: string;
+    lazyLoadImg?: boolean;
+    name: string;
+    description: string;
+    toolTags: string[];
+  };
+}
+
+const {
+  projectDetails = {
+    refLink: "#",
+    posterImage: "",
+    lazyLoadImg: false,
+    name: "Project Name",
+    description: "Project Description",
+    toolTags: [],
+  },
+} = Astro.props;
+---
+
+<LinkPage href={projectDetails.refLink} class="project-card" title="">
+  <img
+    class="w-full h-auto"
+    src={projectDetails.posterImage}
+    alt="project-poster"
+    decoding="async"
+    loading={projectDetails.lazyLoadImg ? "lazy" : undefined}
+  />
+  <h4 class="text-center font-bold text-2xl mb-3 text-font-color-sec">
+    {projectDetails.name}
+  </h4>
+  <p class="text-center mb-2">
+    {projectDetails.description}...
+  </p>
+  {
+    projectDetails.toolTags.length > 0 && (
+      <div class="flex flex-row flex-wrap gap-2 mt-4">
+        {projectDetails.toolTags.map((tag) => (
+          <Tag tagDetails={{ name: tag, styleClass: "bg-tag" }} />
+        ))}
+      </div>
+    )
+  }
+  <!-- <div class="flex flex-row flex-wrap gap-3 text-font-color">
+    <div class="bg-color-red-light py-1 px-2 rounded-md">Unity</div>
+    <div class="bg-color-red-light py-1 px-2 rounded-md">C#</div>
+  </div> -->
+</LinkPage>

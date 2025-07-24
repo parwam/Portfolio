@@ -1,0 +1,98 @@
+---
+import ProjectDetails from "@/layouts/ProjectDetails.astro";
+import IconGithub from "@/components/icons/IconGithub.astro";
+import IconItch from "@/components/icons/IconItch.astro";
+import Tag from "@/components/Tag.astro";
+---
+
+<ProjectDetails projectDetails={{ name: "Pixel Adventure" }}>
+  <slot slot="project-showcase">
+    <div class="project-yt-vd">
+      <iframe
+        width="1905"
+        height="754"
+        src="https://www.youtube.com/embed/CdCLFUjtBYA"
+        title="Pixel-Adventure Gameplay"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen></iframe>
+    </div>
+  </slot>
+
+  <slot slot="project-refs">
+    <a
+      class="project-link"
+      href="https://github.com/parwam/Pixel-Adventure"
+      target="_blank"
+      rel="noopener noreferrer"
+      ><IconGithub styleClass="" />
+      <span class="project-link-text">Source Code</span></a
+    >
+
+    <a
+      class="project-link"
+      href="https://kharva.itch.io/pixel-adventure"
+      target="_blank"
+      rel="noopener noreferrer"
+      ><IconItch styleClass="" />
+      <span class="project-link-text">Play</span></a
+    >
+  </slot>
+
+  <slot slot="project-tags">
+    <div class="project-tag-container">
+      <Tag tagDetails={{ name: "Personal", styleClass: "bg-cyan" }} />
+      <Tag tagDetails={{ name: "Game Developer", styleClass: "bg-purple" }} />
+    </div>
+    <div class="project-tag-container">
+      <Tag tagDetails={{ name: "Unity", styleClass: "bg-pink" }} />
+      <Tag tagDetails={{ name: "C#", styleClass: "bg-pink" }} />
+    </div>
+  </slot>
+
+  <slot slot="project-description">
+    <li>
+      A
+      <span class="font-semibold">2D Platformer</span>
+      game with all mechanics like movement, jump & extra jumps, wall grab & wall
+      jump, dash, attack, flipping, animations
+    </li>
+    <li>
+      <span class="font-semibold">2D patrolling and shooting AI</span>
+      for enemy
+    </li>
+    <li>
+      <span class="font-semibold">Level Management with lock-unlock system</span
+      >
+    </li>
+    <li>
+      Character selection screen with specific movement datas for each character
+      using
+      <span class="font-semibold">Scriptable Objects</span>
+      for Data Management
+    </li>
+    <li>
+      <span class="font-semibold">Audio Manager</span>
+      to play sound effects and random background music on each level - based on
+      <span class="font-semibold">singleton design pattern</span>
+    </li>
+    <li>
+      Responsive UI/UX for player's health, collectibles and game states i.e.
+      win, gameover, pause
+    </li>
+    <li>
+      Multiple traps based on
+      <span class="font-semibold">Unity physics & joints system</span>
+    </li>
+    <li>
+      <span class="font-semibold">Checkpoint system</span>
+      to respawn player based on latest crossed checkpoint
+    </li>
+    <li>
+      Simple save system to keep track of levels, scores, collectibles,
+      checkpoints etc - using
+      <span class="font-semibold">PlayerPrefs</span>
+    </li>
+  </slot>
+</ProjectDetails>

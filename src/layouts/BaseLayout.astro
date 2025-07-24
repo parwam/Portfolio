@@ -1,0 +1,187 @@
+---
+import { ClientRouter } from "astro:transitions";
+
+// import CustomLoadingProgressbar from "@/components/CustomLoadingProgressbar.astro";
+import ThemeProvider from "@/components/ThemeProvider.astro";
+import globalCssHref from "../styles/global.css?url&no-inline";
+import ScrollUpBtn from "@/components/ScrollUpBtn.astro";
+import Header from "@/components/Header.astro";
+import Footer from "@/components/Footer.astro";
+
+interface Props {
+  metadata: {
+    title: string;
+    description: string;
+  };
+  includeLottieAnimScript?: boolean;
+  navSection: string;
+}
+
+const metadata = Astro.props.metadata;
+const navSection = Astro.props.navSection ?? "none";
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <ThemeProvider />
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <link rel="canonical" href={canonicalURL} /> -->
+    <!-- <meta name="generator" content={Astro.generator} /> -->
+
+    <!-- General Meta Tags -->
+    <title>{metadata.title}</title>
+    <meta name="title" content={metadata.title} />
+    <meta name="description" content={metadata.description} />
+    <!-- <meta name="author" content={author} /> -->
+    <link rel="sitemap" href="/sitemap-index.xml" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:title" content={metadata.title} />
+    <meta property="og:description" content={metadata.description} />
+    <!-- <meta property="og:url" content={canonicalURL} /> -->
+    <!-- <meta property="og:image" content={socialImageURL} /> -->
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <!-- <meta property="twitter:url" content={canonicalURL} /> -->
+    <meta property="twitter:title" content={metadata.title} />
+    <meta property="twitter:description" content={metadata.description} />
+    <!-- <meta property="twitter:image" content={socialImageURL} /> -->
+
+    <!-- #Preload Hints# -->
+    <!-- Preloaded locally hosted necessary fonts -->
+    <link
+      rel="preload"
+      href="/fonts/TiemposText-Regular.otf"
+      as="font"
+      type="font/otf"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="preload"
+      href="/fonts/TiemposText-Bold.otf"
+      as="font"
+      type="font/otf"
+      crossorigin="anonymous"
+    />
+
+    <!-- <script is:inline src={toggleThemeSrc}></script> -->
+    <link rel="stylesheet" href={globalCssHref} />
+
+    <ClientRouter />
+
+    <!-- Favicons -->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/favicons/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/favicons/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/favicons/favicon-16x16.png"
+    />
+    <link rel="manifest" href="/favicons/site.webmanifest" />
+    <link
+      rel="mask-icon"
+      href="/favicons/safari-pinned-tab.svg"
+      color="#5bbad5"
+    />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
+
+    <!-- <CustomLoadingIndicator /> -->
+    <!-- <CustomLoadingProgressbar /> -->
+  </head>
+  <body>
+    <ScrollUpBtn />
+
+    <Header navSection={navSection} />
+
+    <slot />
+
+    <Footer />
+
+    <script is:inline>
+      // Added is:inline to ensure it's processed correctly by Astro
+      // Check if the device supports touch events
+      function isTouchDevice() {
+        // Ensure window is defined (for SSR safety, though less critical for is:inline)
+        return (
+          typeof window !== "undefined" &&
+          ("ontouchstart" in window || navigator.maxTouchPoints > 0)
+        );
+      }
+
+      // Function to handle touch interactions
+      function handleTouchInteractions() {
+        // Get all interactive elements currently on the page
+        const interactiveElements = document.querySelectorAll(
+          ".link-interaction-effect, .scroll-up-btn, .project-card"
+        );
+
+        // Add event listeners for touch devices
+        interactiveElements.forEach((element) => {
+          // --- Cleanup potential old listeners (optional but good practice) ---
+          // If we previously stored handlers, remove them. Requires storing handlers.
+          // For simplicity here, we'll rely on elements being replaced by Astro,
+          // but be aware this might add duplicate listeners if elements persist across navigations.
+
+          // --- Add new listeners ---
+          const touchStartHandler = () => {
+            element.classList.add("touch");
+          };
+          const touchEndHandler = () => {
+            setTimeout(() => {
+              element.classList.remove("touch");
+            }, 500);
+          };
+
+          element.addEventListener("touchstart", touchStartHandler, {
+            passive: true,
+          }); // Use passive for potential scroll performance
+          element.addEventListener("touchend", touchEndHandler);
+
+          // Optional: Store handlers for potential future removal if needed
+          // element._touchStartHandler = touchStartHandler;
+          // element._touchEndHandler = touchEndHandler;
+        });
+      }
+
+      // Function to initialize touch interactions
+      function initializeTouchInteractions() {
+        if (isTouchDevice()) {
+          handleTouchInteractions();
+        }
+      }
+
+      // Run on initial load
+      initializeTouchInteractions();
+
+      // Run after Astro navigations
+      document.addEventListener("astro:page-load", initializeTouchInteractions);
+    </script>
+    <script src="../scripts/common/navbar-menu.js"></script>
+    <script src="../scripts/common/scroll-handler.js"></script>
+    <script src="../scripts/common/instant-page.js"></script>
+  </body>
+</html>
+
+<style>
+  html,
+  body {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+  }
+</style>

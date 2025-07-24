@@ -1,0 +1,43 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import banner360 from "@/assets/images/home-page/banner-360.webp"
+import banner768 from "@/assets/images/home-page/banner-768.webp"
+import banner1024 from "@/assets/images/home-page/banner-1024.webp"
+
+const metadata = {
+  title: "Parva's Portfolio",
+  description:
+    "Learn top computer courses with V.Vidhya. From programming to graphic design, boost your skills and indulge your creativity to do real work with the help of technology.",
+};
+---
+
+<BaseLayout metadata={metadata} navSection="home">
+  <main class="px-6 lg:px-0">
+    <p class="text-3xl md:text-5xl text-center font-bold mb-5 md:mb-8">
+      Observing, Creating
+    </p>
+
+    <div class="flex items-center justify-center mb-6">
+      <picture>
+        <source media="(max-width: 639px)" srcset=`${banner360.src}` />
+        <source media="(min-width: 640px)" srcset=`${banner768.src}` />
+        <img
+          class="h-64 sm:h-128"
+          src=`${banner1024.src}`
+          alt="about-banner"
+          decoding="async"
+        />
+      </picture>
+    </div>
+
+    <div
+      class="max-w-md lg:max-w-2xl mx-auto mb-12 items-center justify-center"
+    >
+      <p class="text-lg md:text-xl lg:text-2xl text-center">
+        I love observing everything in and of this existence, then express
+        through creating experiences for any mixture of sensory mediums, by
+        blending the artsy and the engineering side of my being.
+      </p>
+    </div>
+  </main>
+</BaseLayout>

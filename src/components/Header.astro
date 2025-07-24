@@ -1,0 +1,84 @@
+---
+import LinkPage from "./LinkPage.astro";
+import pfpIcon64 from "@/assets/icons/pfp/profile-icon-64.webp";
+import pfpIcon128 from "@/assets/icons/pfp/profile-icon-128.webp";
+import ThemeSelector from "./ThemeSelector.astro";
+
+const { navSection } = Astro.props;
+---
+
+<header class="header">
+  <LinkPage href="/" class="flex flex-row items-center">
+    <picture>
+      <source media="(max-width: 639px)" srcset=`${pfpIcon64.src}` />
+      <source media="(min-width: 640px)" srcset=`${pfpIcon128.src}` />
+      <img
+        class="h-9 sm:h-12 md:h-16 w-auto pr-0.5 md:pr-2"
+        src=`${pfpIcon128.src}`
+        alt="profile-icon"
+        decoding="async"
+      />
+    </picture>
+    <p class="font-semibold text-2xl md:text-3xl">Parva</p>
+  </LinkPage>
+
+  <div class="text-2xl cursor-pointer mx-2 sm:hidden block">
+    <i id="navbar-menu-btn" class="fa-solid fa-bars" name="menu"></i>
+  </div>
+
+  <div
+    class="topbar-menu bg-navbar sm:flex z-[-1] md:z-auto left-0 absolute md:static w-full md:w-auto opacity-0 md:opacity-100 top-[-400px] transition-transform sm:transition-none ease-in"
+  >
+    <nav
+      class="flex flex-col sm:flex-row gap-0.5 sm:gap-0 space-x-2 md:space-x-4 font-semibold text-lg md:text-2xl items-center justify-center"
+    >
+      <LinkPage
+        href="/"
+        title="Home"
+        class={`link-interaction-effect ${navSection === "home" ? "underline underline-offset-2 sm:underline-offset-8" : ""}`}
+      />
+      <LinkPage
+        href="/projects/"
+        title="Projects"
+        class={`link-interaction-effect ${navSection === "projects" ? "underline underline-offset-2 sm:underline-offset-8" : ""}`}
+      />
+      <LinkPage
+        href="/extras/"
+        title="Extras"
+        class={`link-interaction-effect ${navSection === "extras" ? "underline underline-offset-2 sm:underline-offset-8" : ""}`}
+      />
+
+      <ThemeSelector />
+
+      <!-- <div
+        class="text-gray-500 dark:text-gray-400 link-interaction-effect rounded-lg text-sm p-1 md:p-2.5"
+      >
+        <button type="button" title="switch to light theme">
+          <svg
+            class="sun w-5 h-5"
+            fill="currentColor"
+            viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"
+            ></path>
+          </svg>
+        </button>
+        <button type="button" title="switch to dark theme">
+          <svg
+            class="moon w-5 h-5"
+            fill="currentColor"
+            viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
+              fill-rule="evenodd"
+              clip-rule="evenodd"></path>
+          </svg>
+        </button>
+      </div> -->
+    </nav>
+  </div>
+</header>

@@ -1,0 +1,73 @@
+---
+import ProjectDetails from "@/layouts/ProjectDetails.astro";
+import IconGithub from "@/components/icons/IconGithub.astro";
+import IconItch from "@/components/icons/IconItch.astro";
+import Tag from "@/components/Tag.astro";
+---
+
+<ProjectDetails projectDetails={{ name: "Space Invaders" }}>
+  <slot slot="project-showcase">
+    <div class="project-yt-vd">
+      <iframe
+        src="https://www.youtube.com/embed/86bOCXXrE0o"
+        title="SpaceInvaders Gameplay"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen></iframe>
+    </div>
+  </slot>
+
+  <slot slot="project-refs">
+    <a
+      class="project-link"
+      href="https://github.com/parwam/Space-Invaders"
+      target="_blank"
+      rel="noopener noreferrer"
+      ><IconGithub styleClass="" />
+      <span class="project-link-text">Source Code</span></a
+    >
+
+    <a
+      class="project-link"
+      href="https://parwam.itch.io/space-invaders"
+      target="_blank"
+      rel="noopener noreferrer"
+      ><IconItch styleClass="" />
+      <span class="project-link-text">Download</span></a
+    >
+  </slot>
+
+  <slot slot="project-tags">
+    <div class="project-tag-container">
+      <Tag tagDetails={{ name: "Personal", styleClass: "bg-cyan" }} />
+      <Tag tagDetails={{ name: "Game Developer", styleClass: "bg-purple" }} />
+    </div>
+    <div class="project-tag-container">
+      <Tag tagDetails={{ name: "C++", styleClass: "bg-pink" }} />
+      <Tag tagDetails={{ name: "SFML", styleClass: "bg-pink" }} />
+      <Tag tagDetails={{ name: "CMake", styleClass: "bg-pink" }} />
+    </div>
+  </slot>
+
+  <slot slot="project-description">
+    <li>
+      A fast-paced Space Invaders game made using C++ and SFML following the
+      core
+      <span class="font-semibold">OOP principles and MVC</span>
+      design pattern, with a
+      <span class="font-semibold"
+        >cross-platform build process using CMake and automatic releases using
+        Github actions workflow</span
+      >
+    </li>
+    <li>
+      Various types of enemies with unique movements, bullets, powerup drops and
+      damage effects on player
+    </li>
+    <li>Different player special abilities on collecting powerup drops</li>
+    <li>
+      Background Music & Sound Effects with UI/UX for health, score, title
+      screen, splash screen etc.
+    </li>
+  </slot>
+</ProjectDetails>
