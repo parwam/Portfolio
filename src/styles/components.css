@@ -84,7 +84,7 @@
   }
 
   .project-link {
-    @apply flex flex-row justify-center items-center gap-x-1 font-medium text-projectlink text-base md:text-xl text-center;
+    @apply flex flex-row justify-center items-center gap-x-1 md:gap-x-2 font-medium text-projectlink text-base md:text-xl text-center;
   }
 
   .project-link-text {
@@ -96,7 +96,7 @@
   }
 
   .project-tag-container {
-    @apply flex flex-row flex-wrap gap-3;
+    @apply flex flex-row flex-wrap justify-center gap-3;
   }
   /* #endregion */
 
