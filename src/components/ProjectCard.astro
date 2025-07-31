@@ -41,7 +41,7 @@ const {
   </p>
   {
     projectDetails.toolTags.length > 0 && (
-      <div class="flex flex-row flex-wrap gap-2 mt-4">
+      <div class="flex flex-row flex-wrap gap-2 mt-4 justify-center">
         {projectDetails.toolTags.map((tag) => (
           <Tag tagDetails={{ name: tag, styleClass: "bg-tag" }} />
         ))}
