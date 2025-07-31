@@ -88,7 +88,11 @@
   }
 
   .project-link-text {
-    @apply underline underline-offset-4 decoration-solid hover:no-underline;
+    @apply no-underline hover:underline underline-offset-4 decoration-solid;
+  }
+
+  .project-link-text.touch {
+    @apply underline;
   }
 
   .project-tag-container {
