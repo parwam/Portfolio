@@ -1,0 +1,77 @@
+---
+import ProjectDetails from "@/layouts/ProjectDetails.astro";
+import IconSite from "@/components/icons/IconSite.astro";
+import Tag from "@/components/Tag.astro";
+---
+
+<ProjectDetails projectDetails={{ name: "V.Vidhya" }}>
+  <slot slot="project-showcase">
+    <!-- <div class="project-yt-vd">
+      <iframe
+        src="https://www.youtube.com/embed/FaCqbnlAfVc"
+        title="Introducing StoryPix - India's biggest UGC led interactive storytelling platform"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen></iframe>
+    </div> -->
+    <img
+      src="/images/webdev-projects/vvidhya-demo.webp"
+      alt="vvidhya demo image"
+    />
+  </slot>
+
+  <slot slot="project-refs">
+    <a
+      class="project-link"
+      href="https://www.vvidhya.com/"
+      target="_blank"
+      rel="noopener noreferrer"
+      ><IconSite styleClass="" />
+      <span class="project-link-text">Main Website</span></a
+    >
+    <a
+      class="project-link"
+      href="https://learn.vvidhya.com/"
+      target="_blank"
+      rel="noopener noreferrer"
+      ><IconSite styleClass="" />
+      <span class="project-link-text">Learning Platform</span></a
+    >
+  </slot>
+
+  <slot slot="project-tags">
+    <div class="project-tag-container">
+      <Tag tagDetails={{ name: "Professional", styleClass: "bg-cyan" }} />
+      <Tag tagDetails={{ name: "Solo Developer", styleClass: "bg-purple" }} />
+    </div>
+    <div class="project-tag-container">
+      <Tag tagDetails={{ name: "HTML", styleClass: "bg-pink" }} />
+      <Tag tagDetails={{ name: "TailwindCSS", styleClass: "bg-pink" }} />
+      <Tag tagDetails={{ name: "JS", styleClass: "bg-pink" }} />
+      <Tag tagDetails={{ name: "Astro", styleClass: "bg-pink" }} />
+      <Tag tagDetails={{ name: "UI/UX", styleClass: "bg-pink" }} />
+    </div>
+  </slot>
+
+  <slot slot="project-description">
+    <li>
+      Single handedly <span class="font-semibold">developing the web-based learning platform</span> for the
+      institute
+    </li>
+    <li>
+      As a Subject Matter Expert, I've been responsible for <span class="font-semibold">designing curriculum
+      and creating content</span> in the form of practical scenario based engaging
+      exercises plus projects for technical courses ranging from designing to
+      programming
+    </li>
+    <li>
+      Alongside, I have been also <span class="font-semibold">teaching</span> fundamentals of programming, web
+      development and game development to students of various backgrounds.
+    </li>
+    <li>
+      To improve the workflow of internal team, I've been constantly managing
+      the institute systems and designing internal tools for a better learning
+      experience for students.
+    </li>
+  </slot>
+</ProjectDetails>
